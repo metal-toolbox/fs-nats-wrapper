@@ -18,7 +18,7 @@ func TestDefaultConfigAndOptions(t *testing.T) {
 	require.Equal(t, 0, cfg.Replicas)
 	require.Equal(t, time.Duration(0), cfg.TTL)
 	require.Equal(t, "", cfg.Description)
-	funcs := []kvOption{
+	funcs := []Option{
 		WithTTL(2 * time.Minute),
 		WithStorageType(nats.MemoryStorage),
 		WithReplicas(3),
